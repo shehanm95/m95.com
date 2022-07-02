@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/img.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="showimg hidden" id="showimg">
+        <div class="displayimage">
+            <div class="close">
+                <button id="closeimg">X</button>
+            </div>
+            <div class="img"><img src="images/pro.png" alt=""></div>
+        </div>
+    </div>
+    <div class="wrapper">
+
+        <!-- 00000000000000000000  PROFILE 0000000000000000000000000000000000-->
+        <div class="prof">
+            <div class="head">
+                <div class="imagewrapper" id="img">
+                    <img src="images/pro.png" alt="">
+                    <div class="dot"></div>
+                </div>
+                <div class="texts">
+                    <h3>Shehan Maleesha</h3>
+                    <p>Full-Stack Web Developer <br> Graphic Designer</p>
+                </div>
+            </div>
+
+            <div class="bio">
+                <div class="bioitem">
+                    <p class="white">Residence</p>
+                    <p class="gray">Sri Lanka</p>
+                </div>
+                <div class="bioitem">
+                    <p class="white">City</p>
+                    <p class="gray">Gampaha</p>
+                </div>
+                <div class="bioitem">
+                    <p class="white">Age</p>
+                    <p class="gray">28</p>
+                </div>
+            </div>
+
+
+            <div class="languages">
+                <div class="loadHolder">
+                    <div class="english round">100%</div>
+                    <p class="white">English</p>
+                </div>
+                <div class="loadHolder">
+                    <div class="french round">90%</div>
+                    <p class="white">French</p>
+                </div>
+                <div class="loadHolder">
+                    <div class="Spanish round">70%</div>
+                    <p class="white">Spanish</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script>
+        var img = document.getElementById('img')
+        var showimg = document.getElementById('showimg')
+
+        img.addEventListener('click', () => {
+            showimg.classList.add('show')
+
+        })
+
+        var closeimg = document.getElementById('closeimg')
+        closeimg.onclick = function () {
+            showimg.classList.remove('show')
+            showimg.classList.add('hidden')
+            console.log('click')
+        }
+
+
+
+    </script>
+</body>
+
+</html>

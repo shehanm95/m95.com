@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(2, 2, 2);
+
+}
+
+.wrapper {
+    width: 80%;
+    background-color: rgb(18, 18, 18);
+    margin: 1rem auto;
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* 0000000000000000000000000000 PROFILE 00000000000000000000000000*/
+/* 0000000000000000000000000000 PROFILE 00000000000000000000000000*/
+
+
+
+.prof {
+
+    border: 1px solid red;
+    min-width: 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    height: 270px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imagewrapper {
+    height: 90px;
+    width: 90px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: salmon;
+    border-radius: 50%;
+    animation: shadow 0.5s ease 0s infinite alternate;
+    position: relative;
+    bottom: 26px;
+    left: 65px;
+}
+
+
+.head img {
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(16, 16, 16);
+
+}
+
+
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0px 0px 10px rgb(246, 229, 227);
+    }
+
+    100% {
+        box-shadow: 0px 0px 15px rgba(255, 135, 135, 0);
+    }
+}
+
+.texts {
+    padding-top: 1rem;
+    height: 100px;
+}
+
+.head p {
+    text-align: center;
+}
+
+.head h3 {
+    text-align: center;
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+}
+
+.head p {
+    color: rgb(203, 203, 203);
+}
+
+
+
+
+/* 00000000 Bio 0000000*/
+
+.bio {
+    padding: 1rem 0;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bioitem {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.white {
+    color: white;
+}
+
+.gray {
+    color: gray;
+}
+
+/* 00000000 languages 0000000*/
+
+.languages {
+    padding: 1rem 0;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.round {
+    color: gray;
+}
+
+.languages p {
+    text-align: center;
+}
