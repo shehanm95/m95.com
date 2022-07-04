@@ -1,0 +1,68 @@
+.salmonlight:hover {
+    background-color: rgb(255, 184, 176);
+    box-shadow: 0px 0px 5px salmon;
+}
+
+.scale:hover {
+    transform: scale(1.02);
+}
+
+.toprem {
+    padding: 1rem 0;
+}
+
+.topremd5 {
+    padding: 0.5rem 0;
+}
+
+.white {
+    color: white;
+}
+
+.Hwhite:hover {
+    color: white;
+}
+
+.gray {
+    color: gray;
+}
+
+.salmon {
+    color: salmon;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.colflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.colbetflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rowflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexflow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,50 @@
+.rightmenuicon {
+    height: 70px;
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+
+}
+
+.rightmenuicon .menu {
+    margin-bottom: 10px;
+    height: 40%;
+    width: 40%;
+
+}
+
+.rightmenuicon .menu .mline {
+    margin-top: 20%;
+    height: 13%;
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.menulanguages {
+    height: 150px;
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    margin-top: auto;
+}
+
+.curlanuage {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-top: 23px;
+    border-radius: 50%;
+}
+
+.curlanuage p {
+    padding-top: 7px;
+    font-weight: 500;
+}
+
+.en {
+    background-color: rgb(230, 120, 108);
+    box-shadow: 0px 0px 8px rgb(255, 255, 255);
+}
+
+.fr {
+    background-color: rgb(10, 10, 10);
+}

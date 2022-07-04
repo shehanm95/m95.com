@@ -1,0 +1,86 @@
+.landinghead {
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.837) 100%, rgba(0, 0, 0, 0)100%),
+        url("https://www.takemesrilanka.lk/wp-content/uploads/2019/07/knu.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.landingcontent {
+    height: 300px;
+    width: 90%;
+    background: linear-gradient(rgba(0, 0, 0, 0.668) 100%, rgba(0, 0, 0, 0.564)100%),
+        url("https://www.takemesrilanka.lk/wp-content/uploads/2019/07/knu.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 10px;
+    box-shadow: -30px -30px 1px rgb(23, 23, 23);
+}
+
+.landingcontent .texts {
+    min-width: 600px;
+    padding-bottom: 160px;
+}
+
+.landingcontent .texts h1 {
+    font-size: 2.7rem;
+    line-height: 1;
+    color: white;
+}
+
+.landingcontent .texts p {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0.4rem 0;
+    font-weight: 500;
+    font-family: monospace;
+}
+
+.blink {
+    border-right: 2px solid white;
+    height: 1rem;
+    animation: blink 0.6s infinite ease;
+    display: inline-block;
+    width: 1px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.landingcontent .texts button {
+    margin-top: 5px;
+    display: inline-block;
+    background-color: gold;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 22px;
+}
+
+.mypic {
+    min-width: 200px;
+    height: 300px;
+    width: 300px;
+}
+
+.mypic img {
+    height: 360px;
+    position: relative;
+    top: -60px;
+}
