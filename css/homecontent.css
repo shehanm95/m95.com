@@ -25,9 +25,11 @@
 }
 
 .landingcontent .texts {
-    min-width: 600px;
-    padding-bottom: 160px;
+    flex-grow: 1;
+    padding-left: 5%;
 }
+
+
 
 .landingcontent .texts h1 {
     font-size: 2.7rem;
@@ -83,4 +85,94 @@
     height: 360px;
     position: relative;
     top: -60px;
+}
+
+
+
+@media (max-width:988px) {
+
+    .landinghead {
+        height: 280px;
+        background: linear-gradient(rgba(0, 0, 0, 0.837) 100%, rgba(0, 0, 0, 0)100%);
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .landingcontent .texts {
+        padding-bottom: 0 0;
+        margin: auto;
+    }
+
+    .landingcontent {
+        height: 300px;
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.668) 100%, rgba(0, 0, 0, 0.564)100%),
+            url("https://www.takemesrilanka.lk/wp-content/uploads/2019/07/knu.jpg");
+        background-size: cover;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 0px;
+        margin-left: 0px;
+        box-shadow: 0 0 0 rgb(23, 23, 23);
+    }
+
+    .landingcontent .texts p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .landinghead {
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .landingcontent .texts {
+        display: flex;
+        flex-direction: column;
+        align-items: top;
+        flex-grow: 1;
+        padding-left: 0;
+    }
+
+    .mypic {
+        display: none;
+    }
+
+    .landingcontent .texts h1 {
+        font-size: 2rem;
+        line-height: 1;
+        color: white;
+        text-align: center;
+    }
+
+    .middletexts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .landingcontent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .landingcontent .texts button {
+        margin: 10px auto;
+        display: block;
+        background-color: gold;
+        color: black;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 10px 22px;
+        align-self: center;
+
+    }
 }

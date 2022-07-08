@@ -9,13 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!--profile cion-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/img.css">
     <link rel="stylesheet" href="css/comman.css">
+    <link rel="stylesheet" href="css/temp.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/homecontent.css">
     <link rel="stylesheet" href="css/navigatearea.css">
@@ -23,6 +26,18 @@
 </head>
 
 <body>
+    <div class="topbar">
+        <div class="border" id="showprofile">
+            <i class='fas fa-address-card' style='font-size:25px; color:white; padding:15px;'></i>
+
+        </div>
+        <div class="nor logo">
+        </div>
+        <div class="border">
+            <p style="font-size:25px; color:white; padding:15px;">&#9868;</p>
+
+        </div>
+    </div>
 
     <div class="showimg hidden" id="showimg">
         <div class="displayimage">
@@ -35,13 +50,10 @@
     <div class="wrapper">
 
         <!-- 00000000000000000000  PROFILE 0000000000000000000000000000000000-->
-        <div class="prof">
-
-            <div class="closeholder rotate Hwhite">
-                <div class="line one"></div>
-                <div class="line two"></div>
+        <div class="prof" id="profile">
+            <div class="closeholder" id="closeprofile">
+                <i class="closeicon fas fa-times Hwhite"></i>
             </div>
-
             <div class="head">
                 <div class="imagewrapper" id="img">
                     <img src="images/pro.jpg" alt="">
@@ -178,17 +190,19 @@
 
         </div>
 
-        <div class="content">
+        <div class="content" id="content">
             <div class="homecontent">
                 <div class="landinghead">
                     <div class="landingcontent">
                         <div class="texts">
                             <h1>Discover My amazing <br> Art Space!</h1>
-                            <p class="salmon">&lt;code&gt;</p>
-                            <p class="white">I made </p>
-                            <p class="white demo" id="demo"></p>
-                            <div class="blink"></div>
-                            <p class="salmon">&lt;/code&gt;</p>
+                            <div class="middletexts">
+                                <p class="salmon">&lt;code&gt;&nbsp;</p>
+                                <p class="white">I make&nbsp;</p>
+                                <p class="white demo" id="demo"></p>
+                                <div class="blink" id="blink"></div>
+                                <p class="salmon">&nbsp;&lt;/code&gt;</p>
+                            </div>
                             <div style="background-color:1px solid rgb(128, 0, 0); height:100px;">
                                 <button id="but" class="Hwhite">Explore Now</button>
                             </div>
@@ -206,7 +220,7 @@
             </div>
         </div>
         <!--content-->
-        <div class="navigatearea colbetflex ">
+        <div class="navigatearea ">
             <div class="rightmenuicon colflex">
                 <div class="menu">
                     <div class="mline"></div>
@@ -311,7 +325,7 @@
 
         //00000000000000000000 CODE TYPE 00000000000000
 
-        var texts = ['websites.....!               ', 'logos.....!             ', 'packaging designs.....!             ',]
+        var texts = [' websites.....!               ', ' logos.....!             ', ' packaging designs!             ',]
         let count = 0
         let index = 0
         let letter = ''
@@ -336,6 +350,28 @@
         }
 
         type()
+
+        //00000000000000000000 SHOW PROFILE 00000000000000
+        var profile = document.getElementById('profile');
+        var blink = document.getElementById('blink');
+        var showprofile = document.getElementById('showprofile').addEventListener('click', () => {
+            profile.classList.add('showprofile')
+            profile.classList.remove('prof')
+            blink.classList.add('none')
+            closeprofile.classList.remove('none')
+        })
+
+        //00000000000000000000 CLOSE PROFILE 00000000000000
+        var closeprofile = document.getElementById('closeprofile')
+        closeprofile.addEventListener('click', () => {
+            profile.classList.remove('showprofile')
+            profile.classList.add('prof')
+            blink.classList.remove('none')
+            closeprofile.classList.add('none')
+            console.log('close clicked')
+        })
+
+
 
 
     </script>
