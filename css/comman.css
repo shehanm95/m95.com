@@ -19,6 +19,23 @@
     color: white;
 }
 
+.opacity {
+    opacity: 0.6;
+}
+
+.inlineblock {
+    display: inline-block;
+}
+
+.tcenter {
+    text-align: center;
+}
+
+.gold {
+    color: gold;
+}
+
+
 .Hwhite:hover {
     color: white;
 }
@@ -29,6 +46,10 @@
 
 .salmon {
     color: salmon;
+}
+
+.samallf {
+    font-size: 0.8rem;
 }
 
 .hidden {
@@ -60,9 +81,8 @@
     align-items: center;
 }
 
+
 .flexflow {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-flow: row wrap;
 }
