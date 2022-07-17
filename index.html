@@ -9,20 +9,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!--profile cion-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/img.css">
     <link rel="stylesheet" href="css/comman.css">
+    <link rel="stylesheet" href="css/temp.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/homecontent.css">
     <link rel="stylesheet" href="css/navigatearea.css">
+    <link rel="stylesheet" href="css/realmenu.css">
+    <link rel="stylesheet" href="css/commonservice.css">
 
 </head>
 
 <body>
+
+    <div class="topbar">
+        <div id="showprofile" class="showprofiletopbaricon">
+            <i class='fas fa-address-card' style='font-size:25px; color:white; padding:15px;'></i>
+
+        </div>
+        <div class="logo">
+            <h1 class="gray">M</h1>
+            <h1 class="gold">95</h1>
+            <h1 class="white">.com</h1>
+        </div>
+        <div class="startnow colflex logo">
+            <button class="tcenter">Start now</button>
+        </div>
+        <div class="showprofiletopbaricon" id="rightmenuicontopbar">
+            <p style="font-size:25px; color:white; padding:15px;">&#9868;</p>
+
+        </div>
+    </div>
 
     <div class="showimg hidden" id="showimg">
         <div class="displayimage">
@@ -32,16 +56,15 @@
             <div class="img"><img src="images/pro.jpg" alt=""></div>
         </div>
     </div>
+    <button onclick="scrollto(content, 0, 10000)" class="topnavigationbutton">&#10506;</button>
     <div class="wrapper">
 
+
         <!-- 00000000000000000000  PROFILE 0000000000000000000000000000000000-->
-        <div class="prof">
-
-            <div class="closeholder rotate Hwhite">
-                <div class="line one"></div>
-                <div class="line two"></div>
+        <div class="prof" id="profile">
+            <div class="closeholder none" id="closeprofile">
+                <i class="closeicon fas fa-times Hwhite"></i>
             </div>
-
             <div class="head">
                 <div class="imagewrapper" id="img">
                     <img src="images/pro.jpg" alt="">
@@ -178,17 +201,19 @@
 
         </div>
 
-        <div class="content">
-            <div class="homecontent">
+        <div class="content" id="content">
+            <div class="homecontent dnone" id="home">
                 <div class="landinghead">
                     <div class="landingcontent">
                         <div class="texts">
                             <h1>Discover My amazing <br> Art Space!</h1>
-                            <p class="salmon">&lt;code&gt;</p>
-                            <p class="white">I made </p>
-                            <p class="white demo" id="demo"></p>
-                            <div class="blink"></div>
-                            <p class="salmon">&lt;/code&gt;</p>
+                            <div class="middletexts">
+                                <p class="salmon">&lt;code&gt;&nbsp;</p>
+                                <p class="white">I make&nbsp;</p>
+                                <p class="white demo" id="demo"></p>
+                                <div class="blink" id="blink"></div>
+                                <p class="salmon">&nbsp;&lt;/code&gt;</p>
+                            </div>
                             <div style="background-color:1px solid rgb(128, 0, 0); height:100px;">
                                 <button id="but" class="Hwhite">Explore Now</button>
                             </div>
@@ -199,15 +224,362 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--home content-->
-            <div class="other">
 
+                <div class="experience">
+                    <div class="exitem">
+                        <h1 class="gold" id="years">10+</h1>
+                        <p class="white">Experience</p>
+                    </div>
+                    <div class="exitem">
+                        <h1 class="gold" id="projects">143</h1>
+                        <p class="white">Compleated Projects</p>
+                    </div>
+                    <div class="exitem">
+                        <h1 class="gold" id="customers">114</h1>
+                        <p class="white">Happy Customers</p>
+                    </div>
+                    <div class="exitem">
+                        <h1 class="gold" id="awards">20+</h1>
+                        <p class="white">Awards</p>
+                    </div>
+
+                </div>
+                <!--experience-->
+                <h2 class=" white" style="padding:10px 0 0 20px ;">Services</h1>
+                    <div class="servises" id="services">
+                        <div class="serccard">
+                            <div class="crdhedder">
+                                <p class="white">Website</p>
+                            </div>
+                            <div class="crdtxt gray">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi sed dignissimos, nulla
+                                    expedita voluptas, magnam alias incidunt ab id totam accusamus adipisci delectus,
+                                    possimus culpaper Autem recusandae eaque, minima velAutem.</p>
+                            </div>
+                            <div class="a">
+                                <a class="gold" href="#">ORDER NOW > </a>
+                            </div>
+                        </div>
+                        <div class="serccard">
+                            <div class="crdhedder">
+                                <p class="white">Reviwer Name</p>
+                            </div>
+                            <div class="crdtxt gray">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi sed dignissimos, nulla
+                                    expedita voluptas, magnam alias incidunt ab id totam accusamus adipisci delectus,
+                                    possimus culpaper Autem recusandae eaque, minima velAutem.</p>
+                            </div>
+                            <div class="a">
+                                <a class="gold" href="#">ORDER NOW > </a>
+                            </div>
+                        </div>
+                        <div class="serccard">
+                            <div class="crdhedder">
+                                <p class="white">Reviwer Name</p>
+                            </div>
+                            <div class="crdtxt gray">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi sed dignissimos, nulla
+                                    expedita voluptas, magnam alias incidunt ab id totam accusamus adipisci delectus,
+                                    possimus culpaper Autem recusandae eaque, minima velAutem.</p>
+                            </div>
+                            <div class="a">
+                                <a class="gold" href="#">ORDER NOW > </a>
+                            </div>
+                        </div>
+                        <div class="serccard">
+                            <div class="crdhedder">
+                                <p class="white">Reviwer Name</p>
+                            </div>
+                            <div class="crdtxt gray">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi sed dignissimos, nulla
+                                    expedita voluptas, magnam alias incidunt ab id totam accusamus adipisci delectus,
+                                    possimus culpaper Autem recusandae eaque, minima velAutem.</p>
+                            </div>
+                            <div class="a">
+                                <a class="gold" href="#">ORDER NOW > </a>
+                            </div>
+                        </div>
+                        <div class="serccard">
+                            <div class="crdhedder">
+                                <p class="white">Reviwer Name</p>
+                            </div>
+                            <div class="crdtxt gray">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi sed dignissimos, nulla
+                                    expedita voluptas, magnam alias incidunt ab id totam accusamus adipisci delectus,
+                                    possimus culpaper Autem recusandae eaque, minima velAutem.</p>
+                            </div>
+                            <div class="a">
+                                <a class="gold" href="#">ORDER NOW > </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="space" style="height:1rem;"></div>
+                    <!--services-->
+
+
+                    <!--888888888888888888 PRICE PLANS 8888888888888888888888-->
+                    <h2 class=" white" style="padding:10px 0 0 20px ;">Price Plans</h1>
+                        <div class="pricePlans">
+                            <div class="plan">
+                                <div class="planholder">
+                                    <p class="planhedding white tcenter">Starter Price</p>
+                                    <div class="priceholder">
+                                        <p class="doller">$</p>
+                                        <h1 class="gold tcenter inlineblock">100</h1>
+                                    </div>
+                                    <div class="space" style="height:1.2rem;"></div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Ui Design</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Web Development</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                        <p class="itemText gray inlineblock opacity samallf">Logo Design</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                        <p class="itemText gray inlineblock opacity samallf">Backend Development</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                        <p class="itemText gray inlineblock opacity samallf">SEO Optimization</p>
+                                    </div>
+
+                                    <a class="gold a tcenter" href="#">ORDER NOW > </a>
+
+                                </div>
+                            </div>
+                            <div class="plan">
+                                <div class="planholder" style="overflow:hidden ;">
+                                    <div class="populer">
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOST
+                                            POPULER</p>
+                                    </div>
+                                    <p class="planhedding white tcenter" style="padding-left:10px ;">Standerd Price</p>
+                                    <div class="priceholder">
+                                        <p class="doller">$</p>
+                                        <h1 class="gold tcenter inlineblock">210</h1>
+                                    </div>
+                                    <div class="space" style="height:1.2rem;"></div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Ui Design</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Web Development</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Logo Design</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Backend Development</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                        <p class="itemText gray inlineblock opacity samallf">SEO Optimization</p>
+                                    </div>
+
+                                    <a class="gold a tcenter" href="#">ORDER NOW > </a>
+
+                                </div>
+                            </div>
+                            <div class="plan">
+                                <div class="planholder">
+                                    <p class="planhedding white tcenter">Premium Price</p>
+                                    <div class="priceholder">
+                                        <p class="doller">$</p>
+                                        <h1 class="gold tcenter inlineblock">300</h1>
+                                    </div>
+                                    <div class="space" style="height:1.1rem;"></div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Ui Design</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Web Development</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Logo Design</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Backend Development</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">SEO Optimization</p>
+                                    </div>
+
+                                    <a class="a tcenter" href="#">ORDER NOW > </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--999999999999999999999999999 Recommendations 99999999999999999999-->
+
+                        <h2 class=" white" style="padding:10px 0 10px 20px ;">Recommendations</h1>
+                            <div class="recomendations" id="recomendation">
+                                <div class="reccard">
+                                    <img src="images/pro.jpg" alt="">
+                                    <div class="crdhedder">
+                                        <p class="white">Reviwer Name</p>
+                                        <p class="recCountry">United
+                                            State
+                                        </p>
+                                    </div>
+                                    <div class="crdtxt gray">
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi sed
+                                            dignissimos,
+                                            nulla
+                                            expedita voluptas, magnam alias incidunt ab id totam accusamus adipisci
+                                            delectus,
+                                            possimus culpaper Autem recusandae eaque, minima velAutem distinctio ducimus
+                                            nemo
+                                            dignissimos voluptatibus.</p>
+                                    </div>
+                                    <div class="stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="reccard">
+                                    <img src="images/pro.jpg" alt="">
+                                    <div class="crdhedder">
+                                        <p class="white">Reviwer Name</p>
+                                        <p class="recCountry">United
+                                            State
+                                        </p>
+                                    </div>
+                                    <div class="crdtxt gray">
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi sed
+                                            dignissimos,
+                                            nulla
+                                            expedita voluptas, magnam alias incidunt ab id totam accusamus adipisci
+                                            delectus,
+                                            possimus culpaper Autem recusandae eaque, minima velAutem distinctio ducimus
+                                            nemo
+                                            dignissimos voluptatibus.</p>
+                                    </div>
+                                    <div class="stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="reccard">
+                                    <img src="images/pro.jpg" alt="">
+                                    <div class="crdhedder">
+                                        <p class="white">Reviwer Name</p>
+                                        <p class="recCountry">United
+                                            State
+                                        </p>
+                                    </div>
+                                    <div class="crdtxt gray">
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi sed
+                                            dignissimos,
+                                            nulla
+                                            expedita voluptas, magnam alias incidunt ab id totam accusamus adipisci
+                                            delectus,
+                                            possimus culpaper Autem recusandae eaque, minima velAutem distinctio ducimus
+                                            nemo
+                                            dignissimos voluptatibus.</p>
+                                    </div>
+                                    <div class="stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="scrollbuttons">
+                                <div class="righter">
+                                    <button onclick="scrollto(recomendation , 0 , 0)"
+                                        style="font-size:30px; line-height:0.1; text-align:center;">
+                                        &#171; </button>
+                                    <button onclick="scrollto(recomendation , 2000 , 0)"
+                                        style="font-size:30px; line-height:0.1; text-align:center;">&#187;</button>
+                                </div>
+                            </div>
+                            <!--recomendations-->
             </div>
+            <!--home content end-->
+            <div class="homecontent" id="Websites">
+                <div class="narea">
+                    <button onclick="navigate(Websites)" class="gray Hwhite scale">WEBSITE DESIGN</button>
+                    <button onclick="navigate(logodesigns)" class="gray Hwhite scale">LOGO DESIGN</button>
+                    <button onclick="navigate(packageingDesigns)" class="gray Hwhite scale">PACKGING DESIGN</button>
+                </div>
+                <div class="portfolio">
+                    <div class="pitem">
+                        <div class="iicon"><i class="fas fa-expand"></i></div>
+                        <img src="https://img.freepik.com/premium-vector/set-modern-professional-business-card_169798-804.jpg?w=2000"
+                            alt="">
+                        <div class="ptxt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur accusamus
+                                ipsa nihil reprehenderit sequi animi reiciendis et blanditiis itaque.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon"><i class="fas fa-expand"></i></div>
+                        <img src="https://img.freepik.com/premium-vector/set-modern-professional-business-card_169798-804.jpg?w=2000"
+                            alt="">
+                        <div class="ptxt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur accusamus
+                                ipsa nihil reprehenderit sequi animi reiciendis et blanditiis itaque.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon"><i class="fas fa-expand"></i></div>
+                        <img src="https://img.freepik.com/premium-vector/set-modern-professional-business-card_169798-804.jpg?w=2000"
+                            alt="">
+                        <div class="ptxt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur accusamus
+                                ipsa nihil reprehenderit sequi animi reiciendis et blanditiis itaque.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon"><i class="fas fa-expand"></i></div>
+                        <img src="https://img.freepik.com/premium-vector/set-modern-professional-business-card_169798-804.jpg?w=2000"
+                            alt="">
+                        <div class="ptxt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur accusamus
+                                ipsa nihil reprehenderit sequi animi reiciendis et blanditiis itaque.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--website content end-->
+            <div class="dnone" id="packageingDesigns">packaging</div>
+            <!--packaging conten end-->
+            <div class="dnone" id="logodesigns">Logo Design</div>
+            <!--logo content end-->
+            <div class="dnone" id="contanct">CONTACT</div>
+            <!--contact conten endt-->
         </div>
         <!--content-->
-        <div class="navigatearea colbetflex ">
-            <div class="rightmenuicon colflex">
+
+
+
+        <div class="navigatearea ">
+            <div class="rightmenuicon colflex" id="rightmenuicon">
                 <div class="menu">
                     <div class="mline"></div>
                     <div class="mline"></div>
@@ -224,8 +596,53 @@
                 </div>
             </div>
         </div><!-- navigatearea-->
-    </div> <!-- wrapper-->
 
+        <div class="realmenu" id="realmenu">
+
+            <div class="realmenuclosebutton" id="realmenuclosebutton"><i class="closeicon fas fa-times gold Hwhite"></i>
+            </div>
+
+            <div class="realmenuitems colflex">
+                <button onclick="navigate(home)" class="realmenuitem scale">HOME</button>
+                <button onclick="toggledropdown(dropdown1)" class="realmenuitem scale">
+                    <p class=""></p>&nbsp;&nbsp;PORTOFLIO</p>
+                    <p class="righter micon" style="font-size: 20px; padding:0; line-height:1;">&gt;&nbsp;</p>
+                </button>
+                <!--dropdon 1-->
+                <div class="dropdown" id="dropdown1">
+                    <button onclick="navigate(Websites)" class="realmenuitem scale">WEBSITE DESIGN</button>
+                    <button onclick="navigate(logodesigns)" class="realmenuitem scale">LOGO DESIGN</button>
+                    <button onclick="navigate(packageingDesigns)" class="realmenuitem scale">PACKGING DESIGN</button>
+                    <button class="realmenuitem scale">SEO TOOLS</button>
+
+                </div>
+                <button class="realmenuitem scale">HISTORY</button>
+                <button onclick="navigate(contanct)" class="realmenuitem scale">CONTACT</button>
+                <button onclick="toggledropdown(dropdown2)" class="realmenuitem scale">
+                    <p class=""></p>&nbsp;&nbsp;BLOG</p>
+                    <p class="righter micon" style="font-size: 20px; padding:0; line-height:1;">&gt;&nbsp;</p>
+                </button>
+                <!--dropdon 2-->
+                <div class="dropdown" id="dropdown2">
+                    <button class="realmenuitem scale">PERSONAL BLOG</button>
+                    <button class="realmenuitem scale">JAVASCRIPT LLESSONS</button>
+                    <button class="realmenuitem scale">PYTHON LEESON</button>
+                    <button class="realmenuitem scale">Django Freamwork</button>
+                </div>
+                <button class="realmenuitem scale">OPENPAGE</button>
+            </div>
+            <div class="menulanguages colflex" style="min-width: 300px;">
+                <div class="curlanuage en white flexcol">
+                    <p>EN</p>
+                </div>
+                <div class="curlanuage fr gray flexcol Hwhite">
+                    <p>FR</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- wrapper-->
 
 
     <!-- 888888888888888888888 FINISHED HTML 88888888888888888888888888888888888888888888-->
@@ -262,7 +679,7 @@
             progressValueenglish++;
             valueContainerenglish.textContent = `${progressValueenglish}%`;
             progressBarenglish.style.background = `conic-gradient(
-                salmon ${progressValueenglish * 3.6}deg,
+                gold ${progressValueenglish * 3.6}deg,
                 rgb(36, 36, 36) ${progressValueenglish * 3.6}deg
                 )`;
             if (progressValueenglish == progressEndValueenglish) {
@@ -281,7 +698,7 @@
             progressValuefrench++;
             valueContainerfrnch.textContent = `${progressValuefrench}%`;
             progressBarfrench.style.background = `conic-gradient(
-                salmon ${progressValuefrench * 3.6}deg,
+                gold ${progressValuefrench * 3.6}deg,
                 rgb(36, 36, 36) ${progressValuefrench * 3.6}deg
             )`;
             if (progressValuefrench == progressEndValuefrench) {
@@ -300,7 +717,7 @@
             progressValuespain++;
             valueContainerspain.textContent = `${progressValuespain}%`;
             progressBarspain.style.background = `conic-gradient(
-                salmon ${progressValuespain * 3.6}deg,
+                gold ${progressValuespain * 3.6}deg,
                 rgb(36, 36, 36) ${progressValuespain * 3.6}deg
             )`;
             if (progressValuespain == progressEndValuespain) {
@@ -311,7 +728,7 @@
 
         //00000000000000000000 CODE TYPE 00000000000000
 
-        var texts = ['websites.....!               ', 'logos.....!             ', 'packaging designs.....!             ',]
+        var texts = [' websites.....!               ', ' logos.....!             ', ' packaging designs!             ',]
         let count = 0
         let index = 0
         let letter = ''
@@ -336,6 +753,133 @@
         }
 
         type()
+
+        //00000000000000000000 SHOW PROFILE 00000000000000
+        var profile = document.getElementById('profile');
+        var blink = document.getElementById('blink');
+        var showprofile = document.getElementById('showprofile').addEventListener('click', () => {
+            profile.classList.add('showprofile')
+            profile.classList.remove('prof')
+            blink.classList.add('none')
+            closeprofile.classList.remove('none')
+        })
+
+        //00000000000000000000 CLOSE PROFILE 00000000000000
+        var closeprofile = document.getElementById('closeprofile')
+        closeprofile.addEventListener('click', () => {
+            profile.classList.remove('showprofile')
+            profile.classList.add('prof')
+            blink.classList.remove('none')
+            closeprofile.classList.add('none')
+            console.log('close clicked')
+        })
+
+        //00000000000000000000 SCROLL ANYTHING FINCTION 00000000000000
+
+        var recomendation = document.getElementById('recomendation')
+        var services = document.getElementById('services')
+
+        function scrollto(item, x, y) {
+            item.scrollTo(x, y)
+        }
+
+        //00000000000000000000 DISPLAY RIGHT MENU 00000000000000
+
+        var menuclosed = true
+        var realmenu = document.getElementById('realmenu')
+        var rightmenuicon = document.getElementById('rightmenuicon')
+        var rightmenuicontopbar = document.getElementById('rightmenuicontopbar')
+
+        document.getElementById('realmenuclosebutton').addEventListener('click', () => {
+            openmenu()
+        })
+        document.getElementById('rightmenuicontopbar').addEventListener('click', () => {
+            openmenu()
+        })
+        rightmenuicon.addEventListener('click', () => {
+            openmenu()
+        })
+
+        function openmenu() {
+            if (menuclosed) {
+                realmenu.classList.add('realmenuopend')
+                menuclosed = false
+            } else {
+                realmenu.classList.remove('realmenuopend')
+                menuclosed = true
+            }
+        }
+
+        //00000000000000000000 Incrsse experience 00000000000000
+
+        var years = document.getElementById('years')
+        var projects = document.getElementById('projects')
+        var customers = document.getElementById('customers')
+        var awards = document.getElementById('awards')
+
+
+        function incrace(item, number, s, ss, needmore = false, str) {
+            var next = false
+            var tnum = 0
+            var varname
+            varname = setInterval(function () {
+
+                item.innerHTML = tnum + str
+                tnum++
+
+                if (tnum == number + 1) {
+                    next = true
+                    clearInterval(varname)
+                    inner()
+                }
+            }, s)
+
+            function inner() {
+                if (next && needmore) {
+
+                    varname = setInterval(function () {
+                        item.innerHTML = number + str
+                        number++
+                    }, ss)
+                }
+            }
+        }
+
+        var y = incrace(years, 10, 50, 30000, true, 'y')
+        var p = incrace(projects, 230, 10, 4000, true, '')
+        var c = incrace(customers, 206, 15, 7000, true, '')
+        var a = incrace(awards, 20, 100, 25000, true, '+')
+
+        function print(str) { console.log(str) }
+
+        //00000000000000000000 NAVIGATION CLAPSED 00000000000000
+        var dropdown1 = document.getElementById('dropdown1')
+        var dropdown2 = document.getElementById('dropdown2')
+
+        function toggledropdown(ele) {
+            ele.classList.toggle('clapsed');
+        }
+        //00000000000000000000 NAVIGATE BETWEEN PAGES 00000000000000
+
+        var home = document.getElementById('home')
+        var contanct = document.getElementById('contanct')
+        var logodesigns = document.getElementById('logodesigns')
+        var packageingDesigns = document.getElementById('packageingDesigns')
+        var Websites = document.getElementById('Websites')
+
+        var allContentPages = [home, contanct, logodesigns, packageingDesigns, Websites]
+
+        function navigate(page) {
+            print('done')
+            allContentPages.forEach((p) => {
+                p.classList.add('dnone')
+            })
+            page.classList.remove('dnone')
+        }
+
+
+
+
 
 
     </script>
