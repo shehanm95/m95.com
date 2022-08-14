@@ -1,0 +1,95 @@
+.realmenu {
+    width: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    height: 100%;
+    transition: all 1s;
+    background-color: rgb(36, 36, 36);
+    overflow-x: hidden;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width:414px) {
+
+    .realmenu {
+        width: 0px;
+    }
+}
+
+.realmenuopend {
+    width: 300px;
+}
+
+@media (max-width:414px) {
+
+    .realmenuopend {
+        width: 100%;
+    }
+
+}
+
+
+
+.realmenuclosebutton i {
+    float: right;
+    padding: 7px 10px 5px 7px;
+}
+
+.realmenuclosebutton {
+    width: 100%;
+    height: 35px;
+}
+
+.realmenulang {
+    margin-top: auto
+}
+
+.realmenuitems {
+    min-width: 300px;
+    height: calc(90vh - 158px);
+}
+
+.realmenuitem {
+    background-color: rgba(0, 0, 0, 0);
+    color: gray;
+    width: 100%;
+    padding: 5px;
+    display: inline-block;
+}
+
+.realmenuitem p {
+    background-color: rgba(0, 0, 0, 0);
+    color: gray;
+    padding: 5px;
+    display: inline-block;
+}
+
+.realmenuitem:hover,
+.realmenuitem p:hover,
+.realmenuitem:hover .micon {
+    background-color: rgb(72, 72, 72);
+    color: rgb(233, 233, 233);
+}
+
+.dropdown {
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.dropdown button {
+    background-color: rgba(72, 72, 72, 0.236);
+}
+
+.dropdown button:hover {
+    background-color: rgba(107, 107, 107, 0.647);
+}
+
+.clapsed {
+    height: 120px;
+}
