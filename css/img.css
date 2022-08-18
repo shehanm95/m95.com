@@ -13,7 +13,7 @@
 }
 
 .displayimage {
-    background-color: rgba(0, 0, 0, 0.366);
+    background-color: rgba(0, 0, 0, 0.814);
     border: 1px solid rgb(37, 37, 37);
     width: 80vw;
     height: 80vh;
@@ -23,6 +23,8 @@
     align-items: center;
     margin: auto;
 }
+
+
 
 .close {
     flex: 1;
@@ -37,24 +39,37 @@
     justify-content: center;
     align-items: center;
     min-height: 70vh;
-    min-width: 70vh;
+    max-height: 70vh;
+
+}
+
+@media (max-width:900px) {
+    .displayimage {
+        background-color: rgba(0, 0, 0, 0.948);
+        min-width: 100vw;
+        max-height: 80vh;
+    }
+
 }
 
 .displayimage img {
     flex: 9;
     animation: size 0.25s linear;
+    max-height: 70vh;
+    max-width: 80vw;
+    margin-top: -5vh;
 }
 
 @keyframes size {
     0% {
-        max-height: 10vh;
-        max-width: 10vh;
+        max-height: 10px;
+        max-width: 10px;
     }
 
     100% {
-        max-height: 100%;
-        max-width: 100%;
-        min-width: 30vh;
+        max-height: 700px;
+
+
     }
 }
 
@@ -65,4 +80,5 @@
     margin-right: 10px;
     margin-top: 10px;
     color: white;
+    font-size: 1.5rem;
 }

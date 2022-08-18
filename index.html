@@ -5,45 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>M95.COM WEB SERVICE</title>
+    <link rel="shortcut icon" href="images/my.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!--profile cion-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/img.css">
     <link rel="stylesheet" href="css/comman.css">
+    <link rel="stylesheet" href="css/temp.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/homecontent.css">
     <link rel="stylesheet" href="css/navigatearea.css">
+    <link rel="stylesheet" href="css/realmenu.css">
+    <link rel="stylesheet" href="css/commonservice.css">
 
 </head>
 
 <body>
+
+    <div class="topbar">
+        <div id="showprofile" class="showprofiletopbaricon">
+            <i class='fas fa-address-card' style='font-size:25px; color:white; padding:15px;'></i>
+
+        </div>
+        <div class="logo" onclick="navigateinpage(home)">
+            <h1 class="gray">M</h1>
+            <h1 class="gold">95</h1>
+            <h1 class="white">.com</h1>
+        </div>
+        <div class="startnow colflex logo">
+            <button class="tcenter">Start now</button>
+        </div>
+        <div class="showprofiletopbaricon" id="rightmenuicontopbar">
+            <p style="font-size:25px; color:white; padding:15px;">&#9868;</p>
+
+        </div>
+    </div>
 
     <div class="showimg hidden" id="showimg">
         <div class="displayimage">
             <div class="close">
                 <button id="closeimg">X</button>
             </div>
-            <div class="img"><img src="images/pro.jpg" alt=""></div>
+            <div class="img"><img src="images/pro.jpg" alt="" id="image"></div>
         </div>
     </div>
+    <button onclick="scrollto(content, 0, 0)" class="topnavigationbutton">&#10506;</button>
     <div class="wrapper">
 
+
         <!-- 00000000000000000000  PROFILE 0000000000000000000000000000000000-->
-        <div class="prof">
-
-            <div class="closeholder rotate Hwhite">
-                <div class="line one"></div>
-                <div class="line two"></div>
+        <div class="prof" id="profile">
+            <div class="closeholder none" id="closeprofile">
+                <i class="closeicon fas fa-times Hwhite"></i>
             </div>
-
             <div class="head">
-                <div class="imagewrapper" id="img">
+                <div class="imagewrapper" id="img" onclick="showimage('images/pro.jpg')">
                     <img src="images/pro.jpg" alt="">
                     <div class="dot salmonlight"></div>
                 </div>
@@ -178,19 +202,21 @@
 
         </div>
 
-        <div class="content">
-            <div class="homecontent">
+        <div class="content" id="content">
+            <div class="homecontent homeanim" id="home">
                 <div class="landinghead">
                     <div class="landingcontent">
                         <div class="texts">
                             <h1>Discover My amazing <br> Art Space!</h1>
-                            <p class="salmon">&lt;code&gt;</p>
-                            <p class="white">I made </p>
-                            <p class="white demo" id="demo"></p>
-                            <div class="blink"></div>
-                            <p class="salmon">&lt;/code&gt;</p>
+                            <div class="middletexts">
+                                <p class="salmon">&lt;code&gt;&nbsp;</p>
+                                <p class="white">I make&nbsp;</p>
+                                <p class="white demo" id="demo"></p>
+                                <div class="blink" id="blink"></div>
+                                <p class="salmon">&nbsp;&lt;/code&gt;</p>
+                            </div>
                             <div style="background-color:1px solid rgb(128, 0, 0); height:100px;">
-                                <button id="but" class="Hwhite">Explore Now</button>
+                                <button id="but" onclick="openmenu()" class="Hwhite">Explore Now</button>
                             </div>
                         </div>
 
@@ -199,15 +225,1243 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--home content-->
-            <div class="other">
 
+                <div class="experience">
+                    <div class="exitem">
+                        <h1 class="gold" id="years">10+</h1>
+                        <p class="white">Experience</p>
+                    </div>
+                    <div class="exitem">
+                        <h1 class="gold" id="projects">143</h1>
+                        <p class="white">Compleated Projects</p>
+                    </div>
+                    <div class="exitem">
+                        <h1 class="gold" id="customers">114</h1>
+                        <p class="white">Happy Customers</p>
+                    </div>
+                    <div class="exitem">
+                        <h1 class="gold" id="awards">20+</h1>
+                        <p class="white">Awards</p>
+                    </div>
+
+                </div>
+                <!--experience-->
+                <h2 class=" white" style="padding:10px 0 0 20px ;">My Services.</h1>
+                    <div class="servises" id="services">
+                        <div class="serccard">
+                            <div class="crdhedder">
+                                <p class="white">Web Development</p>
+                            </div>
+                            <div class="crdtxt gray">
+                                <p>
+                                    A website is a very important thing in these days, We have to make it more
+                                    attractive and user friendly. Common templated websites are not giving the 100%
+                                    efficient service for every busines. That is why you need to make a custom website
+                                    with the help of us.
+                                </p>
+                            </div>
+                            <div class="a">
+                                <a class="gold" onclick="navigateinpage(website)" href="#">ORDER NOW > </a>
+                            </div>
+                        </div>
+                        <div class="serccard">
+                            <div class="crdhedder">
+                                <p class="white">Minimal Logo Design.</p>
+                            </div>
+                            <div class="crdtxt gray">
+                                <p>
+                                    In the modern world lot of premium brands are using Minimal logos, they are simple
+                                    but easy to remember as a brand. it can be used to as a watermark or as a app icon
+                                    also, if you would like to create your brand a as a premium brand, you can get your
+                                    dream logo from here.
+                                </p>
+                            </div>
+                            <div class="a">
+                                <a class="gold" onclick="navigateinpage(minimal)" href="#">ORDER NOW > </a>
+                            </div>
+                        </div>
+                        <div class="serccard">
+                            <div class="crdhedder">
+                                <p class="white">Hand Drawn Logo Design.</p>
+                            </div>
+                            <div class="crdtxt gray">
+                                <p>Hand drawn logos are giving vintage feeling to your brand. But it can make classy
+                                    feel to your brand when it using in agriulture industry etc.. or beverage industry.
+                                    your can order it in here according your brand requirements.
+                                </p>
+                            </div>
+                            <div class="a">
+                                <a class="gold" onclick="navigateinpage(handdrawn)" href="#">ORDER NOW > </a>
+                            </div>
+                        </div>
+                        <div class="serccard">
+                            <div class="crdhedder">
+                                <p class="white">Packaging Designs.</p>
+                            </div>
+                            <div class="crdtxt gray">
+                                <p>Design is a key factor in packaging. A quality package design can attract potential
+                                    customers and set the product apart from the competition. The visual presence
+                                    represents not only the quality of the product, but should also suggest a clear
+                                    personality , whether it be quirky, authentic or charming. </p>
+                            </div>
+                            <div class="a">
+                                <a class="gold" onclick="navigateinpage(packageingDesigns)" href="#">ORDER NOW > </a>
+                            </div>
+                        </div>
+                        <div class="serccard">
+                            <div class="crdhedder">
+                                <p class="white">Stationery Designs.</p>
+                            </div>
+                            <div class="crdtxt gray">
+                                <p>With the popularity of email people
+                                    may not send letters with the same frequency as in the past, but a branded
+                                    letterhead, whether printed or digital is still a necessity plus being given a
+                                    beautifully crafted business card never gets old.your can order it in here according
+                                    your brand requirements.</p>
+                            </div>
+                            <div class="a">
+                                <a class="gold" target="_blank"
+                                    href="https://www.fiverr.com/mshehan1995?up_rollout=true">ORDER NOW >
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="space" style="height:1rem;"></div>
+                    <!--services-->
+
+
+                    <!--888888888888888888 PRICE PLANS 8888888888888888888888-->
+                    <h2 class=" white" style="padding:10px 0 0 20px ;">Price Plans For Web Sites</h1>
+                        <div class="pricePlans">
+                            <div class="plan">
+                                <div class="planholder">
+                                    <p class="planhedding white tcenter">Starter Price</p>
+                                    <div class="priceholder">
+                                        <p class="doller">$</p>
+                                        <h1 class="gold tcenter inlineblock">100</h1>
+                                    </div>
+                                    <div class="space" style="height:1.2rem;"></div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Ui Design</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Web Development</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                        <p class="itemText gray inlineblock opacity samallf">Logo Design</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                        <p class="itemText gray inlineblock opacity samallf">Backend Development</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                        <p class="itemText gray inlineblock opacity samallf">SEO Optimization</p>
+                                    </div>
+
+                                    <a class="gold a tcenter" target="_blank"
+                                        href="https://www.fiverr.com/mshehan1995/build-web-design-and-create-business-website-or-blog-design">ORDER
+                                        NOW > </a>
+
+                                </div>
+                            </div>
+                            <div class="plan">
+                                <div class="planholder" style="overflow:hidden ;">
+                                    <div class="populer">
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOST
+                                            POPULER</p>
+                                    </div>
+                                    <p class="planhedding white tcenter" style="padding-left:10px ;">Standerd Price</p>
+                                    <div class="priceholder">
+                                        <p class="doller">$</p>
+                                        <h1 class="gold tcenter inlineblock">210</h1>
+                                    </div>
+                                    <div class="space" style="height:1.2rem;"></div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Ui Design</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Web Development</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Logo Design</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Backend Development</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                        <p class="itemText gray inlineblock opacity samallf">SEO Optimization</p>
+                                    </div>
+
+                                    <a class="gold a tcenter" target="_blank"
+                                        href="https://www.fiverr.com/mshehan1995/build-web-design-and-create-business-website-or-blog-design">ORDER
+                                        NOW > </a>
+
+                                </div>
+                            </div>
+                            <div class="plan">
+                                <div class="planholder">
+                                    <p class="planhedding white tcenter">Premium Price</p>
+                                    <div class="priceholder">
+                                        <p class="doller">$</p>
+                                        <h1 class="gold tcenter inlineblock">300</h1>
+                                    </div>
+                                    <div class="space" style="height:1.1rem;"></div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Ui Design</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Web Development</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Logo Design</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">Backend Development</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="gold icon inlineblock samallf">&#10004;</p>
+                                        <p class="itemText gray inlineblock samallf">SEO Optimization</p>
+                                    </div>
+
+                                    <a class="gold a tcenter" target="_blank"
+                                        href="https://www.fiverr.com/mshehan1995/build-web-design-and-create-business-website-or-blog-design">ORDER
+                                        NOW > </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--999999999999999999999999999 Recommendations 99999999999999999999-->
+
+                        <h2 class=" white" style="padding:10px 0 10px 20px ;">Recommendations</h1>
+                            <div class="recomendations" id="recomendation">
+                                <div class="reccard">
+                                    <img src="images/r1.jpg" alt="">
+                                    <div class="crdhedder">
+                                        <p class="white">nicolehorsman.</p>
+                                        <p class="recCountry">United
+                                            State
+                                        </p>
+                                    </div>
+                                    <div class="crdtxt gray">
+                                        <p>Thanks a lot for my website and the logo.
+                                            This web developer followed all the requirements I requested and also finish
+                                            before
+                                            the deadline. Don’t hesitate to give this designer a shot, you won’t regret
+                                            it!!!!</p>
+                                    </div>
+                                    <div class="stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="reccard">
+                                    <img src="images/r2.jpg" alt="">
+                                    <div class="crdhedder">
+                                        <p class="white">robert peter creed.</p>
+                                        <p class="recCountry"> United Kingdom
+                                        </p>
+                                    </div>
+                                    <div class="crdtxt gray">
+                                        <p>We have worked with Shehan for several projects and are never disappointed.
+                                            The talent in capturing what we are envisioning is amazing, and always
+                                            prompt and professional. We look forward to future projects.</p>
+                                    </div>
+                                    <div class="stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="reccard">
+                                    <img src="images/r3.png" alt="">
+                                    <div class="crdhedder">
+                                        <p class="white">Hafsa Javaria.</p>
+                                        <p class="recCountry">United
+                                            State
+                                        </p>
+                                    </div>
+                                    <div class="crdtxt gray">
+                                        <p>This is my second time working with this seller, both times have been great.
+                                            I received my initial product before I was suppose to, the response to my
+                                            changes were fast, and my final products were great1</p>
+                                    </div>
+                                    <div class="stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="reccard">
+                                    <img src="images/r4.jpg" alt="">
+                                    <div class="crdhedder">
+                                        <p class="white">William Benjamin.</p>
+                                        <p class="recCountry">United
+                                            State
+                                        </p>
+                                    </div>
+                                    <div class="crdtxt gray">
+                                        <p>This artist designed our logo a couple of years ago and did an excellent
+                                            job. When I had a need or a label design I knew I could depend on her to
+                                            create exactly what we needed. She is quick to respond, and does great work.
+                                        </p>
+                                    </div>
+                                    <div class="stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="reccard">
+                                    <img src="images/r5.jpg" alt="">
+                                    <div class="crdhedder">
+                                        <p class="white">Oliver James.</p>
+                                        <p class="recCountry">United
+                                            State
+                                        </p>
+                                    </div>
+                                    <div class="crdtxt gray">
+                                        <p>Let me start off by saying Shehan is the best person you can hire for logo
+                                            design. I had a vision and Shehan was the only person that was able to bring
+                                            that vision to life. Very respectful and kind. If I had any questions or
+                                            concerns Shehan was help out. Excellence is the best way to describe my
+                                            experience with Shehan.
+                                        </p>
+                                    </div>
+                                    <div class="stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="scrollbuttons">
+                                <div class="righter">
+                                    <button onclick="scrollto(recomendation , 0 , 0)"
+                                        style="font-size:30px; line-height:0.1; text-align:center;">
+                                        &#171; </button>
+                                    <button onclick="scrollto(recomendation , 2000 , 0)"
+                                        style="font-size:30px; line-height:0.1; text-align:center;">&#187;</button>
+                                </div>
+                            </div>
+                            <!--recomendations-->
             </div>
+            <!--home content end-->
+
+
+            <div class="dnone" id="website">
+                <div class="narea"><button onclick="navigateinpage(website)" class="gray Hwhite scale">Web
+                        Development
+                    </button>
+                    <button onclick="navigateinpage(minimal)" class="gray Hwhite scale">Minimal Logo Design</button>
+                    <button onclick="navigateinpage(handdrawn)" class="gray Hwhite scale">Hand Drawn Logo
+                        Design</button>
+                    <button onclick="navigateinpage(packageingDesigns)" class="gray Hwhite scale">PACKGING Design
+
+                </div>
+                <h2 class="portfolioheadder white">Web Development</h2>
+                <div class="portfolio">
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/w-01.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/w-01.png" alt="">
+                        <div class="ptxt">
+                            <p> This is a one of website I have made for a artist, now it has good trafic and good
+                                selling rate,
+                                the customer was tottally happy with it.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/w-02.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/w-02.png" alt="">
+                        <div class="ptxt">
+                            <p>This is a one of website I have made for a furniture shop, now it has good trafic and
+                                good
+                                selling rate,
+                                the customer was tottally happy with it.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/w-03.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/w-03.png" alt="">
+                        <div class="ptxt">
+                            <p>This is a one of website I have made for a blog, now it has good trafic and I am the
+                                person who maiking main changes of the website.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/w-04.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/w-04.png" alt="">
+                        <div class="ptxt">
+                            <p>This is a one of tourism website I have made, it helps tourists to find good pleases to
+                                visit.
+                                now it has good trafic in the websites.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/w-05.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/w-05.png" alt="">
+                        <div class="ptxt">
+                            <p>This is a one of website I have made for technical collage, now it has good trafic and I
+                                am the
+                                person who maiking main changes of the website.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/w-06.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/w-06.png" alt="">
+                        <div class="ptxt">
+                            <p>This is a one of farm website I have made, it helps those farmers to sell there products
+                                world wide
+                                now it has good trafic in the websites.</p>
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/w-07.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/w-07.png" alt="">
+                        <div class="ptxt">
+                            <p>This is a one of blog website I have made about sri lanka, it helps peoples to explare
+                                the sri lanka through the web.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/w-08.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/w-08.png" alt="">
+                        <div class="ptxt">
+                            <p>This is a one of I have made for a antiqe shop, now it has good trafic and I
+                                am the
+                                person who maiking main changes of the website.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/w-09.png')"><i class="fas fa-expand"></i>
+                        </div>
+                        <img class="opacityh" src="images/w-09.png" alt="">
+                        <div class="ptxt">
+                            <p>I have made few pages for this Hospital website, now this website also working well, and
+                                this has good SEO technology aslo.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--888888888888888888 PRICE PLANS 8888888888888888888888-->
+                <h2 class=" white" style="padding:10px 0 0 20px ;">Price Plans For Web Sites</h1>
+                    <div class="pricePlans">
+                        <div class="plan">
+                            <div class="planholder">
+                                <p class="planhedding white tcenter">Starter Price</p>
+                                <div class="priceholder">
+                                    <p class="doller">$</p>
+                                    <h1 class="gold tcenter inlineblock">100</h1>
+                                </div>
+                                <div class="space" style="height:1.2rem;"></div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Ui Design</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Web Development</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Logo Design</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Backend Development</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">SEO Optimization</p>
+                                </div>
+
+                                <a class="gold a tcenter" target="_blank"
+                                    href="https://www.fiverr.com/mshehan1995/build-web-design-and-create-business-website-or-blog-design">ORDER
+                                    NOW > </a>
+
+                            </div>
+                        </div>
+                        <div class="plan">
+                            <div class="planholder" style="overflow:hidden ;">
+                                <div class="populer">
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOST
+                                        POPULER</p>
+                                </div>
+                                <p class="planhedding white tcenter" style="padding-left:10px ;">Standerd Price</p>
+                                <div class="priceholder">
+                                    <p class="doller">$</p>
+                                    <h1 class="gold tcenter inlineblock">210</h1>
+                                </div>
+                                <div class="space" style="height:1.2rem;"></div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Ui Design</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Web Development</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Logo Design</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Backend Development</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">SEO Optimization</p>
+                                </div>
+
+                                <a class="gold a tcenter" target="_blank"
+                                    href="https://www.fiverr.com/mshehan1995/build-web-design-and-create-business-website-or-blog-design">ORDER
+                                    NOW > </a>
+
+                            </div>
+                        </div>
+                        <div class="plan">
+                            <div class="planholder">
+                                <p class="planhedding white tcenter">Premium Price</p>
+                                <div class="priceholder">
+                                    <p class="doller">$</p>
+                                    <h1 class="gold tcenter inlineblock">300</h1>
+                                </div>
+                                <div class="space" style="height:1.1rem;"></div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Ui Design</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Web Development</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Logo Design</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Backend Development</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">SEO Optimization</p>
+                                </div>
+
+                                <a class="gold a tcenter" target="_blank"
+                                    href="https://www.fiverr.com/mshehan1995/build-web-design-and-create-business-website-or-blog-design">ORDER
+                                    NOW > </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+
+            <!--website conten endt-->
+            <div class="homecontent dnone" id="minimal">
+                <div class="narea"><button onclick="navigateinpage(packageingDesigns)" class="gray Hwhite scale">Web
+                        Development
+                    </button>
+                    <button onclick="navigateinpage(minimal)" class="gray Hwhite scale">Minimal Logo Design</button>
+                    <button onclick="navigateinpage(handdrawn)" class="gray Hwhite scale">Hand Drawn Logo
+                        Design</button>
+                    <button onclick="navigateinpage(packageingDesigns)" class="gray Hwhite scale">PACKGING Design
+
+                </div>
+                <h2 class="portfolioheadder white">Minimal Logo Design</h2>
+                <div class="portfolio">
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/m-01.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/m-01.png" alt="">
+                        <div class="ptxt">
+                            <p>This is one of minal logo I have made for a Interior design company and , this kind of
+                                logos are very
+                                suitable for modern website and stationery designs.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/m-02.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/m-02.png" alt="">
+                        <div class="ptxt">
+                            <p>This is one of minal logo I have made for a Event management company and , this kind of
+                                logos are very
+                                suitable for modern website and stationery designs.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/m-03.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/m-03.png" alt="">
+                        <div class="ptxt">
+                            <p>This is one of minal logo I have made for a Cake designer and , this kind of logos are
+                                very
+                                suitable for modern website and stationery designs.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/m-04.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/m-04.png" alt="">
+                        <div class="ptxt">
+                            <p>This is one of minal logo I have made for a Filming company and , this kind of logos are
+                                very
+                                suitable for modern website and stationery designs.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/m-05.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/m-05.png" alt="">
+                        <div class="ptxt">
+                            <p>This is one of minal logo I have made for a Gym and , this kind of logos are very
+                                suitable for modern website and stationery designs.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/m-06.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/m-06.png" alt="">
+                        <div class="ptxt">
+                            <p>This is one of minal logo I have made for a Sport Item Shop and , this kind of logos are
+                                very
+                                suitable for modern website and stationery designs.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/m-07.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/m-07.png" alt="">
+                        <div class="ptxt">
+                            <p>This is one of minal logo I have made for a Online Store and , this kind of logos are
+                                very
+                                suitable for modern website and stationery designs.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/m-08.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/m-08.png" alt="">
+                        <div class="ptxt">
+                            <p>This is one of minal logo I have made for a Shre Market Prediction Company and , this
+                                kind of logos are very
+                                suitable for modern website and stationery designs.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/m-09.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/m-09.png" alt="">
+                        <div class="ptxt">
+                            <p>This is one of minal logo I have made for a bitting center and , this kind of logos are
+                                very
+                                suitable for modern website and stationery designs.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--888888888888888888 PRICE PLANS FOR MINIMAL LOGOS 8888888888888888888888-->
+                <h2 class="white" style="padding:10px 0 0 20px ;">Price Plans For Minimal Logos</h1>
+                    <div class="pricePlans">
+                        <div class="plan">
+                            <div class="planholder">
+                                <p class="planhedding white tcenter">Starter Price</p>
+                                <div class="priceholder">
+                                    <p class="doller">$</p>
+                                    <h1 class="gold tcenter inlineblock">45</h1>
+                                </div>
+                                <div class="space" style="height:1.2rem;"></div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Logo Transparency</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Printable File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblocksamallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">3D Mockup</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Source File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Vector File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Stationery Designs</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Social Media Kit</p>
+                                </div>
+
+                                <a class="gold a tcenter" target="_blank"
+                                    href="https://www.fiverr.com/mshehan1995/design-your-minimal-logo">ORDER NOW > </a>
+
+                            </div>
+                        </div>
+                        <div class="plan">
+                            <div class="planholder" style="overflow:hidden ;">
+                                <div class="populer">
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOST
+                                        POPULER</p>
+                                </div>
+                                <p class="planhedding white tcenter" style="padding-left:10px ;">Standerd Price</p>
+                                <div class="priceholder">
+                                    <p class="doller">$</p>
+                                    <h1 class="gold tcenter inlineblock">65</h1>
+                                </div>
+                                <div class="space" style="height:1.2rem;"></div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Logo Transparency</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Printable File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblocksamallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">3D Mockup</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Source File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Vector File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Stationery Designs</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Social Media Kit</p>
+                                </div>
+
+                                <a class="gold a tcenter" target="_blank"
+                                    href="https://www.fiverr.com/mshehan1995/design-your-minimal-logo">ORDER NOW > </a>
+
+                            </div>
+                        </div>
+                        <div class="plan">
+                            <div class="planholder">
+                                <p class="planhedding white tcenter">Premium Price</p>
+                                <div class="priceholder">
+                                    <p class="doller">$</p>
+                                    <h1 class="gold tcenter inlineblock">85</h1>
+                                </div>
+                                <div class="space" style="height:1.2rem;"></div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Logo Transparency</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Printable File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblocksamallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">3D Mockup</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Source File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Vector File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Stationery Designs</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock  samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock  samallf">Social Media Kit</p>
+                                </div>
+
+                                <a class="a tcenter" target="_blank"
+                                    href="https://www.fiverr.com/mshehan1995/design-your-minimal-logo">ORDER NOW > </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+            <!--minimal content end-->
+            <div class="homecontent dnone" id="handdrawn">
+                <div class="narea"><button onclick="navigateinpage(packageingDesigns)" class="gray Hwhite scale">Web
+                        Development
+                    </button>
+                    <button onclick="navigateinpage(minimal)" class="gray Hwhite scale">Minimal Logo Design</button>
+                    <button onclick="navigateinpage(handdrawn)" class="gray Hwhite scale">Hand Drawn Logo
+                        Design</button>
+                    <button onclick="navigateinpage(packageingDesigns)" class="gray Hwhite scale">PACKGING Design
+
+                </div>
+                <h2 class="portfolioheadder white">Hand Drawn Logo Design</h2>
+                <div class="portfolio">
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/h-01.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/h-01.png" alt="">
+                        <div class="ptxt">
+                            <p>I made this logo and using this for 2 years, this logo is brought lot of logo design
+                                orders to me.
+                                I love this logo </p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/h-02.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/h-02.png" alt="">
+                        <div class="ptxt">
+                            <p>I made this logo for a bewarage company few years ago, they was exteramly happy aby the
+                                logo, The company is going well now also.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/h-03.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/h-03.png" alt="">
+                        <div class="ptxt">
+                            <p>I made this logo for my self, because I very much like to this pirate theme.
+                                those who are seenig this logo are request me to design their logos also.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/h-04.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/h-04.png" alt="">
+                        <div class="ptxt">
+                            <p>I designed This logo for a Hot Lamb Street Food Truck, after making this logo He called
+                                me to design
+                                his next business'es logo also.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/h-05.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/h-05.png" alt="">
+                        <div class="ptxt">
+                            <p>This logo I made for a tatto shop. I can desgin logos with coloring like this aslo, look
+                                at how noce is it... This logo gives colored and vintage feel at the same time.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/h-06.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/h-06.png" alt="">
+                        <div class="ptxt">
+                            <p style="font-size: 0.72rem;">I designed this logo for a cookie shop. I have made lot of
+                                revisions to compleate this
+                                logo. But I am not worring about it. at the end I need to satisfy the customer
+                                100%. </p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/h-07.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/h-07.png" alt="">
+                        <div class="ptxt">
+                            <p>I made this logo for a pony riding items selling shop, I made a colored version also for
+                                this, the customer was happy with boath, but my favorite is this.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/h-08.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/h-08.png" alt="">
+                        <div class="ptxt">
+                            <p>I made this logo for a American Farm, He needed to design this roof with the Covering
+                                From their national Flag, This is also one of nice logos I have made.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/h-09.png')"><i class="fas fa-expand"></i></div>
+                        <img src="images/h-09.png" alt="">
+                        <div class="ptxt">
+                            <p>This logo for a brewing company.this is also a one of grate vintage felt logo I have
+                                made, now this business also running well.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--888888888888888888 PRICE PLANS FOR HAND DRAWN LOGOS 8888888888888888888888-->
+                <h2 class="white" style="padding:10px 0 0 20px ;">Price Plans For Minimal Logos</h1>
+                    <div class="pricePlans">
+                        <div class="plan">
+                            <div class="planholder">
+                                <p class="planhedding white tcenter">Starter Price</p>
+                                <div class="priceholder">
+                                    <p class="doller">$</p>
+                                    <h1 class="gold tcenter inlineblock">80</h1>
+                                </div>
+                                <div class="space" style="height:1.2rem;"></div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Logo Transparency</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Printable File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblocksamallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">3D Mockup</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Source File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Vector File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Stationery Designs</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Social Media Kit</p>
+                                </div>
+
+                                <a class="gold a tcenter" target="_blank"
+                                    href="https://www.fiverr.com/mshehan1995/design-your-hand-drawn-logo">ORDER NOW >
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="plan">
+                            <div class="planholder" style="overflow:hidden ;">
+                                <div class="populer">
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOST
+                                        POPULER</p>
+                                </div>
+                                <p class="planhedding white tcenter" style="padding-left:10px ;">Standerd Price</p>
+                                <div class="priceholder">
+                                    <p class="doller">$</p>
+                                    <h1 class="gold tcenter inlineblock">125</h1>
+                                </div>
+                                <div class="space" style="height:1.2rem;"></div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Logo Transparency</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Printable File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblocksamallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">3D Mockup</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Source File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Vector File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Stationery Designs</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Social Media Kit</p>
+                                </div>
+
+                                <a class="gold a tcenter" target="_blank"
+                                    href="https://www.fiverr.com/mshehan1995/design-your-hand-drawn-logo">ORDER NOW >
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="plan">
+                            <div class="planholder">
+                                <p class="planhedding white tcenter">Premium Price</p>
+                                <div class="priceholder">
+                                    <p class="doller">$</p>
+                                    <h1 class="gold tcenter inlineblock">175</h1>
+                                </div>
+                                <div class="space" style="height:1.2rem;"></div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Logo Transparency</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Printable File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblocksamallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">3D Mockup</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Source File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Vector File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Stationery Designs</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock  samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock  samallf">Social Media Kit</p>
+                                </div>
+
+                                <a class="a tcenter" target="_blank"
+                                    href="https://www.fiverr.com/mshehan1995/design-your-hand-drawn-logo">ORDER NOW >
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+            <!--hand drawn logo content end-->
+            <div class="dnone" id="packageingDesigns">
+                <div class="narea"><button onclick="navigateinpage(website)" class="gray Hwhite scale">Web
+                        Development
+                    </button>
+                    <button onclick="navigateinpage(minimal)" class="gray Hwhite scale">Minimal Logo Design</button>
+                    <button onclick="navigateinpage(handdrawn)" class="gray Hwhite scale">Hand Drawn Logo
+                        Design</button>
+                    <button onclick="navigateinpage(packageingDesigns)" class="gray Hwhite scale">PACKGING Design
+
+                </div>
+                <h2 class="portfolioheadder white">Packaging Design Portfolio</h2>
+                <div class="portfolio">
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/p-01.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/p-01.png" alt="">
+                        <div class="ptxt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur accusamus
+                                ipsa nihil reprehenderit sequi animi reiciendis et blanditiis itaque.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/p-02.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/p-02.png" alt="">
+                        <div class="ptxt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur accusamus
+                                ipsa nihil reprehenderit sequi animi reiciendis et blanditiis itaque.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/p-03.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/p-03.png" alt="">
+                        <div class="ptxt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur accusamus
+                                ipsa nihil reprehenderit sequi animi reiciendis et blanditiis itaque.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/p-04.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/p-04.png" alt="">
+                        <div class="ptxt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur accusamus
+                                ipsa nihil reprehenderit sequi animi reiciendis et blanditiis itaque.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/p-05.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/p-05.png" alt="">
+                        <div class="ptxt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur accusamus
+                                ipsa nihil reprehenderit sequi animi reiciendis et blanditiis itaque.</p>
+
+                        </div>
+                    </div>
+                    <div class="pitem">
+                        <div class="iicon" onclick="showimage('images/p-06.png')"><i class="fas fa-expand"></i></div>
+                        <img class="opacityh" src="images/p-06.png" alt="">
+                        <div class="ptxt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur accusamus
+                                ipsa nihil reprehenderit sequi animi reiciendis et blanditiis itaque.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--888888888888888888 PRICE PLANS FOR PACKAGING DESIGN 8888888888888888888888-->
+                <h2 class="white" style="padding:10px 0 0 20px ;">Price Plans For Packaging Designs</h1>
+                    <div class="pricePlans">
+                        <div class="plan">
+                            <div class="planholder">
+                                <p class="planhedding white tcenter">Starter Price</p>
+                                <div class="priceholder">
+                                    <p class="doller">$</p>
+                                    <h1 class="gold tcenter inlineblock">80</h1>
+                                </div>
+                                <div class="space" style="height:1.2rem;"></div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Full Product Wrapping</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Print-Ready</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon opacity inlineblocksamallf">&#10008;</p>
+                                    <p class="itemText gray opacity inlineblock samallf">Source File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">3D Mockup</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Vector File</p>
+                                </div>
+
+                                <a class="gold a tcenter" target="_blank"
+                                    href="https://www.fiverr.com/mshehan1995/do-professional-product-packaging">ORDER
+                                    NOW > </a>
+
+                            </div>
+                        </div>
+                        <div class="plan">
+                            <div class="planholder" style="overflow:hidden ;">
+                                <div class="populer">
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOST
+                                        POPULER</p>
+                                </div>
+                                <p class="planhedding white tcenter" style="padding-left:10px ;">Standerd Price</p>
+                                <div class="priceholder">
+                                    <p class="doller">$</p>
+                                    <h1 class="gold tcenter inlineblock">100</h1>
+                                </div>
+                                <div class="space" style="height:1.2rem;"></div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Full Product Wrapping</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Print-Ready</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblocksamallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Source File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">3D Mockup</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock opacity samallf">&#10008;</p>
+                                    <p class="itemText gray inlineblock opacity samallf">Vector File</p>
+                                </div>
+
+                                <a class="gold a tcenter" target="_blank"
+                                    href="https://www.fiverr.com/mshehan1995/do-professional-product-packaging">ORDER
+                                    NOW > </a>
+
+                            </div>
+                        </div>
+                        <div class="plan">
+                            <div class="planholder">
+                                <p class="planhedding white tcenter">Premium Price</p>
+                                <div class="priceholder">
+                                    <p class="doller">$</p>
+                                    <h1 class="gold tcenter inlineblock">180</h1>
+                                </div>
+                                <div class="space" style="height:1.2rem;"></div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Full Product Wrapping</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Print-Ready</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblocksamallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Source File</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">3D Mockup</p>
+                                </div>
+                                <div class="item">
+                                    <p class="gold icon inlineblock samallf">&#10004;</p>
+                                    <p class="itemText gray inlineblock samallf">Vector File</p>
+                                </div>
+
+                                <a class="a tcenter" target="_blank"
+                                    href="https://www.fiverr.com/mshehan1995/do-professional-product-packaging">ORDER
+                                    NOW > </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+            <!--packaging conten end-->
+            <div class="dnone" id="contanct">CONTACT</div>
+            <!--contact conten endt-->
         </div>
         <!--content-->
-        <div class="navigatearea colbetflex ">
-            <div class="rightmenuicon colflex">
+
+
+
+        <div class="navigatearea ">
+            <div class="rightmenuicon colflex" id="rightmenuicon">
                 <div class="menu">
                     <div class="mline"></div>
                     <div class="mline"></div>
@@ -224,22 +1478,62 @@
                 </div>
             </div>
         </div><!-- navigatearea-->
+
+        <div class="realmenu" id="realmenu">
+
+            <div class="realmenuclosebutton" id="realmenuclosebutton"><i class="closeicon fas fa-times gold Hwhite"></i>
+            </div>
+
+            <div class="realmenuitems colflex">
+                <button onclick="navigate(home)" class="realmenuitem scale">HOME</button>
+                <button onclick="toggledropdown(dropdown1)" class="realmenuitem scale">
+                    <p class=""></p>&nbsp;&nbsp;PORTOFLIO</p>
+                    <p class="righter micon" style="font-size: 20px; padding:0; line-height:1;">&gt;&nbsp;</p>
+                </button>
+                <!--dropdon 1-->
+                <div class="dropdown" id="dropdown1">
+                    <button onclick="navigate(website)" class="realmenuitem scale">WEBSITE DESIGN</button>
+                    <button onclick="navigate(handdrawn)" class="realmenuitem scale">HAND DRAWN LOGO DESIGN</button>
+                    <button onclick="navigate(minimal)" class="realmenuitem scale">MINIMAL LOGO DESIGN</button>
+                    <button onclick="navigate(packageingDesigns)" class="realmenuitem scale">PACKGING DESIGN</button>
+                    <button class="realmenuitem scale">SEO TOOLS</button>
+
+                </div>
+                <button class="realmenuitem scale">HISTORY</button>
+                <button onclick="navigate(contanct)" class="realmenuitem scale">CONTACT</button>
+                <button onclick="toggledropdown(dropdown2)" class="realmenuitem scale">
+                    <p class=""></p>&nbsp;&nbsp;BLOG</p>
+                    <p class="righter micon" style="font-size: 20px; padding:0; line-height:1;">&gt;&nbsp;</p>
+                </button>
+                <!--dropdon 2-->
+                <div class="dropdown" id="dropdown2">
+                    <button class="realmenuitem scale">PERSONAL BLOG</button>
+                    <button class="realmenuitem scale">JAVASCRIPT LLESSONS</button>
+                    <button class="realmenuitem scale">PYTHON LEESON</button>
+                    <button class="realmenuitem scale">Django Freamwork</button>
+                </div>
+                <button class="realmenuitem scale">OPENPAGE</button>
+            </div>
+            <div class="menulanguages colflex" style="min-width: 300px;">
+                <div class="curlanuage en white flexcol">
+                    <p>EN</p>
+                </div>
+                <div class="curlanuage fr gray flexcol Hwhite">
+                    <p>FR</p>
+                </div>
+            </div>
+
+        </div>
+
     </div> <!-- wrapper-->
 
 
-
-    <!-- 888888888888888888888 FINISHED HTML 88888888888888888888888888888888888888888888-->
+    <!-- 888888888888888888888 FINISHED HTML 8888888888888888888888888888888888888888888888888888888888-->
 
     <script>
 
         // Display Images 000000000
-        var img = document.getElementById('img')
-        var showimg = document.getElementById('showimg')
 
-        img.addEventListener('click', () => {
-            showimg.classList.add('show')
-
-        })
 
 
         var closeimg = document.getElementById('closeimg')
@@ -247,6 +1541,12 @@
             showimg.classList.remove('show')
             showimg.classList.add('hidden')
             console.log('click')
+        }
+
+        function showimage(imagename) {
+            document.getElementById('showimg').classList.add('show')
+            document.getElementById('image').src = imagename
+
         }
 
         // SKILL VALUE JENERATOR 000000000000
@@ -262,7 +1562,7 @@
             progressValueenglish++;
             valueContainerenglish.textContent = `${progressValueenglish}%`;
             progressBarenglish.style.background = `conic-gradient(
-                salmon ${progressValueenglish * 3.6}deg,
+                gold ${progressValueenglish * 3.6}deg,
                 rgb(36, 36, 36) ${progressValueenglish * 3.6}deg
                 )`;
             if (progressValueenglish == progressEndValueenglish) {
@@ -281,7 +1581,7 @@
             progressValuefrench++;
             valueContainerfrnch.textContent = `${progressValuefrench}%`;
             progressBarfrench.style.background = `conic-gradient(
-                salmon ${progressValuefrench * 3.6}deg,
+                gold ${progressValuefrench * 3.6}deg,
                 rgb(36, 36, 36) ${progressValuefrench * 3.6}deg
             )`;
             if (progressValuefrench == progressEndValuefrench) {
@@ -300,7 +1600,7 @@
             progressValuespain++;
             valueContainerspain.textContent = `${progressValuespain}%`;
             progressBarspain.style.background = `conic-gradient(
-                salmon ${progressValuespain * 3.6}deg,
+                gold ${progressValuespain * 3.6}deg,
                 rgb(36, 36, 36) ${progressValuespain * 3.6}deg
             )`;
             if (progressValuespain == progressEndValuespain) {
@@ -311,7 +1611,7 @@
 
         //00000000000000000000 CODE TYPE 00000000000000
 
-        var texts = ['websites.....!               ', 'logos.....!             ', 'packaging designs.....!             ',]
+        var texts = [' websites.....!               ', ' logos.....!             ', ' packaging designs!             ',]
         let count = 0
         let index = 0
         let letter = ''
@@ -336,6 +1636,174 @@
         }
 
         type()
+
+        //00000000000000000000 SHOW PROFILE 00000000000000
+        var profile = document.getElementById('profile');
+        var blink = document.getElementById('blink');
+        var showprofile = document.getElementById('showprofile').addEventListener('click', () => {
+            profile.classList.add('showprofile')
+            profile.classList.remove('prof')
+            blink.classList.add('none')
+            closeprofile.classList.remove('none')
+        })
+
+        //00000000000000000000 CLOSE PROFILE 00000000000000
+        var closeprofile = document.getElementById('closeprofile')
+        closeprofile.addEventListener('click', () => {
+            profile.classList.remove('showprofile')
+            profile.classList.add('prof')
+            blink.classList.remove('none')
+            closeprofile.classList.add('none')
+        })
+
+        //00000000000000000000 SCROLL ANYTHING FINCTION 00000000000000
+
+        var recomendation = document.getElementById('recomendation')
+        var services = document.getElementById('services')
+
+        function scrollto(item, x, y) {
+            item.scrollTo(x, y)
+        }
+
+        //00000000000000000000 DISPLAY RIGHT MENU 00000000000000
+
+        var menuclosed = true
+        var realmenu = document.getElementById('realmenu')
+        var rightmenuicon = document.getElementById('rightmenuicon')
+        var rightmenuicontopbar = document.getElementById('rightmenuicontopbar')
+
+        document.getElementById('realmenuclosebutton').addEventListener('click', () => {
+            openmenu()
+        })
+        document.getElementById('rightmenuicontopbar').addEventListener('click', () => {
+            openmenu()
+        })
+        rightmenuicon.addEventListener('click', () => {
+            openmenu()
+        })
+
+        function openmenu() {
+            if (menuclosed) {
+                realmenu.classList.add('realmenuopend')
+                menuclosed = false
+            } else {
+                realmenu.classList.remove('realmenuopend')
+                menuclosed = true
+            }
+        }
+
+        //00000000000000000000 Incrsse experience 00000000000000
+
+        var years = document.getElementById('years')
+        var projects = document.getElementById('projects')
+        var customers = document.getElementById('customers')
+        var awards = document.getElementById('awards')
+
+
+        function incrace(item, number, s, ss, needmore = false, str) {
+            var next = false
+            var tnum = 0
+            var varname
+            varname = setInterval(function () {
+
+                item.innerHTML = tnum + str
+                tnum++
+
+                if (tnum == number + 1) {
+                    next = true
+                    clearInterval(varname)
+                    inner()
+                }
+            }, s)
+
+            function inner() {
+                if (next && needmore) {
+
+                    varname = setInterval(function () {
+                        item.innerHTML = number + str
+                        number++
+                    }, ss)
+                }
+            }
+        }
+
+        var y = incrace(years, 10, 50, 30000, true, 'y')
+        var p = incrace(projects, 230, 10, 4000, true, '')
+        var c = incrace(customers, 206, 15, 7000, true, '')
+        var a = incrace(awards, 20, 100, 25000, true, '+')
+
+        function print(str) { console.log(str) }
+
+        //00000000000000000000 NAVIGATION CLAPSED 00000000000000
+        var dropdown1 = document.getElementById('dropdown1')
+        var dropdown2 = document.getElementById('dropdown2')
+
+        function toggledropdown(ele) {
+            ele.classList.toggle('clapsed');
+        }
+        //00000000000000000000 NAVIGATE BETWEEN PAGES 00000000000000
+
+        var home = document.getElementById('home')
+        var contanct = document.getElementById('contanct')
+        var handdrawn = document.getElementById('handdrawn')
+        var packageingDesigns = document.getElementById('packageingDesigns')
+        var minimal = document.getElementById('minimal')
+        var website = document.getElementById('website')
+
+        var allContentPages = [home, contanct, handdrawn, packageingDesigns, minimal, website]
+
+        function navigate(page) {
+            allContentPages.forEach((p) => {
+                p.classList.add('dnone')
+            })
+            page.classList.remove('dnone')
+
+            if (menuclosed) {
+                realmenu.classList.add('realmenuopend')
+                menuclosed = false
+            } else {
+                realmenu.classList.remove('realmenuopend')
+                menuclosed = true
+            }
+            makingcardanims()
+            scrollto(content, 0, 0)
+
+        }
+        function navigateinpage(page) {
+            allContentPages.forEach((p) => {
+                p.classList.add('dnone')
+            })
+            page.classList.remove('dnone')
+            makingcardanims()
+            scrollto(content, 0, 0)
+        }
+
+        function makingcardanims() {
+            var pitem = document.getElementsByClassName('pitem')
+            makehomeanim();
+            for (i = 0; i < pitem.length; i++) {
+                pitem[i].style.margin = "400px 0px 0px 10px"
+            }
+            for (i = 0; i < pitem.length; i++) {
+                pitem[i].classList.add('cardanim')
+            }
+            for (i = 0; i < pitem.length; i++) {
+                pitem[i].style.margin = "10px 0px 0px 10px"
+            }
+
+        }
+        function makehomeanim() {
+            var myhome = document.getElementById('home')
+            myhome.style.margin = "400px 0px 0px 0px"
+            myhome.classList.add('homeanim')
+            myhome.style.margin = "0px 0px 0px 0px"
+
+
+        }
+
+
+
+
 
 
     </script>
